@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #512DA8;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,121 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.login-row{
+    min-height:100px;
+}
+
+.login-col
+{
+    min-height: 500px;
+    background: #673AB7;
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.dark-primary-color    { background: #512DA8; }
+.default-primary-color { background: #673AB7; }
+.light-primary-color   { background: #D1C4E9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #009688; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+/*    --------------------------------------------------
+	:: Login Section
+	-------------------------------------------------- */
+#login {
+    padding-top: 50px
+}
+#login .form-wrap {
+    width: 60%;
+    margin: 0 auto;
+}
+#login h1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group {
+    margin-bottom: 25px;
+}
+#login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#login .checkbox.show:before {
+    content: '\e013';
+    color: #1fa67b;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+#login .checkbox .label {
+    color: #212121;
+    font-size: 13px;
+    font-weight: 600;
+}
+#login .btn.btn-custom {
+    font-size: 14px;
+	margin-bottom: 20px;
+}
+#login .forget {
+    font-size: 13px;
+	text-align: center;
+	display: block;
+}
+
+#login form
+{
+    padding-left: 20px;
+}
+
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+    color: #212121;
+}
+.btn-custom {
+    color: #fff;
+	background-color: #009688;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}
+
+/*    --------------------------------------------------
+    :: Footer
+	-------------------------------------------------- */
+#footer {
+    color: #6d6d6d;
+    font-size: 12px;
+    text-align: center;
+}
+#footer p {
+    margin-bottom: 0;
+}
+#footer a {
+    color: inherit;
 }
