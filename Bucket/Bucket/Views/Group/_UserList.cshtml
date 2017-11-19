@@ -1,0 +1,8 @@
+﻿@using Bucket.Models
+@model IList<User>
+@foreach(User user in Model)
+{
+    <li>
+        @user.UserName
+    </li>
+}

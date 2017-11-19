@@ -1,5 +1,5 @@
 ﻿@using Bucket.Models
-@Model User
+@model User
 @{
     Layout = null;
 }
@@ -17,7 +17,36 @@
         <div class="row main-row">
             <!-- Menu --> 
             <div class="col-md-3 menu-col">
-                <h3>Welcome, </h3>
+                <h3>Welcome, @Model.UserName</h3>
+                <hr />
+                <ul class="list-group">
+                    <li class="list-group-item no-border" data-toggle="collapse" data-target="#groups">
+                        <p>
+                            Groups
+                        </p>
+                        <ul id="groups" class="collapse">
+                            <li class="list-group-item list-item no-border" id="your-groups">
+                                Your groups
+                            </li>
+                            <li class="list-group-item list-item no-border" id="addGroup">
+                                Add group
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item no-border" data-toggle="collapse" data-target="#lists">
+                        <p>
+                            Lists
+                        </p>
+                        <ul id="lists" class="collapse">
+                            <li class="list-group-item list-item no-border">
+                                Your lists
+                            </li>
+                            <li class="list-group-item list-item no-border">
+                                Add list
+                            </li>
+                        </ul>
+                    </li>
+               </ul>
             </div>
             <!-- Content -->
             <div class="col-md-9 content-col">
@@ -25,5 +54,20 @@
             </div>
         </div>
     </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        $("#addGroup").on("click", function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: "/Group/AddGroup",
+                type: "post"
+            })
+           .done(function (result) {
+               $(".content-col").html(result);;
+               });
+        });
+    </script>
 </body>
 </html>

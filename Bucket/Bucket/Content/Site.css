@@ -183,16 +183,64 @@ textarea {
 .menu-col
 {
     background: #512DA8;
-    min-height: 600px;
+    min-height: 1000px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    color: #FFFFFF;
+    padding: 20px 20px 20px 40px;
 }
 
 .content-col
 {
     background: #673AB7;
-    min-height: 600px;
+    min-height: 1000px;
 }
 
 .main-panel-body
 {
     padding-top: 0px !important; 
+}
+
+.no-border
+{
+    border-top-right-radius: 0px !important; 
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    background-color: #37474F;
+    border: none;
+    color:rgba(255, 255, 255, 0.56);
+}
+
+.list-item:hover {
+  background-color: #263238;
+}
+
+.row-no-margin
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 40px;
+}
+
+.location-description
+{
+    width: 100%;
+    margin-right: 80px;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    padding: 20px 20px 20px 20px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.user-list
+{
+    min-height: 200px;
+
+}
+
+.user-column{
+    background-color: #D0C3E8;
+    min-height: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
 }

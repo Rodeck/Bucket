@@ -20,6 +20,8 @@ namespace Bucket.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        IdentityContext db = new IdentityContext();
+
         public AccountController()
         {
         }
@@ -81,7 +83,7 @@ namespace Bucket.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("MainPanel", "Home");
+                    return RedirectToAction("MainPanelLogin", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -164,6 +166,8 @@ namespace Bucket.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                    
 
                     return RedirectToAction("MainPanel", "Home");
                 }

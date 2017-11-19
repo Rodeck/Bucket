@@ -1,0 +1,56 @@
+﻿@using Bucket.Models
+@model Group
+<div class="container">
+    <div class="row row-no-margin">
+        <div class="location-description">
+            <p>
+                Here you can add new group.
+            </p>
+        </div>         
+    </div>
+    <div class="row row-no-margin location-description">
+
+        @using (Html.BeginForm("Add", "Group", null, FormMethod.Post, null))
+        {
+            <div class="form-group">
+                <p>Group name:</p>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Smiths">
+                <hr />
+                <div class="container">
+                    <div class="row user-list">
+                        <div class="col-md-1">
+
+                        </div>
+                        <div class="col-md-4 user-column">
+                            <p>Begin typing to search for people</p>
+                            <input type="text" name="users" id="people" class="form-control" placeholder="Smiths">
+                            <div id="peopleList">
+
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4 user-column">
+                            <p>People:</p>
+                        </div>
+                        <div class="col-md-1">
+                            <ul id="tableId">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Add group">
+        }
+
+    </div>
+</div>
+<script>
+    $("#people").on("keyup change", function () {
+        var searchTerm = $(this).val();
+        $.get("/Group/SearchForPeople", { searchTerm: searchTerm }, function (data) {
+            $("#tableId").html(data);
+        });
+    });
+</script>
