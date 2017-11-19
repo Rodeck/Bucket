@@ -55,6 +55,24 @@ textarea {
     width: 60%;
     margin: 0 auto;
 }
+
+#register .form-wrap {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#register
+{
+    background: #512DA8;
+}
+
+#register {
+    margin-top: 22px;
+    padding-top: 60px;
+    min-height: 500px;
+}
+
 #login h1 {
     font-size: 18px;
     text-align: center;
@@ -64,6 +82,11 @@ textarea {
 #login .form-group {
     margin-bottom: 25px;
 }
+
+#register .form-group {
+    margin-bottom: 25px;
+}
+
 #login .checkbox {
     margin-bottom: 20px;
     position: relative;
@@ -100,6 +123,12 @@ textarea {
     font-size: 14px;
 	margin-bottom: 20px;
 }
+
+#register .btn.btn-custom {
+    font-size: 14px;
+	margin-bottom: 20px;
+}
+
 #login .forget {
     font-size: 13px;
 	text-align: center;
@@ -107,6 +136,11 @@ textarea {
 }
 
 #login form
+{
+    padding-left: 20px;
+}
+
+#register form
 {
     padding-left: 20px;
 }
@@ -139,4 +173,26 @@ textarea {
 }
 #footer a {
     color: inherit;
+}
+
+.main-row
+{
+    min-height: 600px;
+}
+
+.menu-col
+{
+    background: #512DA8;
+    min-height: 600px;
+}
+
+.content-col
+{
+    background: #673AB7;
+    min-height: 600px;
+}
+
+.main-panel-body
+{
+    padding-top: 0px !important; 
 }
