@@ -11,8 +11,16 @@
     <meta name="viewport" content="width=device-width" />
     <title>MainPanel</title>
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Content/material.js")
+    @Styles.Render("~/Content/material.css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    
 </head>
 <body class="main-panel-body">
+    @Scripts.Render("~/bundles/scripts")
     <div class="container-fluid">
         <div class="row main-row">
             <!-- Menu --> 
@@ -54,20 +62,7 @@
             </div>
         </div>
     </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    <script>
-        $("#addGroup").on("click", function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                url: "/Group/AddGroup",
-                type: "post"
-            })
-           .done(function (result) {
-               $(".content-col").html(result);;
-               });
-        });
-    </script>
+    
 </body>
+
 </html>

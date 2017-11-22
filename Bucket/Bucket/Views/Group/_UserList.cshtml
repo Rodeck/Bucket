@@ -1,8 +1,23 @@
 ﻿@using Bucket.Models
 @model IList<User>
+@Scripts.Render("~/bundles/scripts")
+
 @foreach(User user in Model)
 {
-    <li>
-        @user.UserName
+    <li class="list-group-item person-object">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <i class="material-icons face-icon">tag_faces</i> <p>@user.UserName</p> 
+                </div>
+                <div class="col-md-4">
+                    <div class="add-person-button person person-not-added" value="@user.UserId">
+                        Add
+                    </div>
+                </div>
+            </div>
+        </div>      
     </li>
 }
+
+
