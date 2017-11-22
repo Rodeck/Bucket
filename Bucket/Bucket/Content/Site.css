@@ -291,3 +291,9 @@ textarea {
 {
     padding-top: 0px;
 }
+
+#loadingPanel
+{
+    position: absolute;
+    z-index: 1;
+}

@@ -1,5 +1,7 @@
 ﻿$(document).ready(function () {
 
+    $('#loadingPanel').hide();
+
     $("#people").on("keyup change", function () {
         var searchTerm = $(this).val();
         $.get("/Group/SearchForPeople", { searchTerm: searchTerm }, function (data) {
@@ -30,10 +32,14 @@
 
         $.ajax({
             url: "/Group/AddGroup",
-            type: "post"
+            type: "post",
+            beforeSend: function () {
+                $('#loadingPanel').show();
+            }
         })
        .done(function (result) {
-           $(".content-col").html(result);;
+           $(".content-col").html(result);
+           $('#loadingPanel').hide();
        });
     });
 });
