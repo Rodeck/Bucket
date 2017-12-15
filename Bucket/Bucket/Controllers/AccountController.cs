@@ -17,6 +17,7 @@ namespace Bucket.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        // test
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
